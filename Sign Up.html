@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="icon" type="image/png" href="favicon.png" >
+    <title>Sign Up</title>
+   
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('images/Fresh Homemade Hamburger Served On Wood.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            width: 350px;
+            text-align: center;
+            
+        }
+
+        input,select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border-radius: 5px;
+   
+        }
+
+        button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: .6rem 1.8rem;
+            font-size: 1.7rem;
+            cursor: pointer;
+            color: white;
+            background: #45a049;
+            border-radius: .5rem;
+        }
+
+        button:hover {
+            background-color: #130f40;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 40px;
+            margin: 20px 0;
+        }
+
+        .login-link {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        span {
+            color: black;
+        }
+        span:hover {
+            background-color: #45a049 ;
+            border-radius: .5rem;
+        }
+    </style>
+</head>
+<body>
+
+   <!-- Sign Up -->
+   <form id="registration-form">
+    <h2>Sign Up</h2>
+    <input type="text" placeholder="Fullname" required>
+    <input type="text" placeholder="Email" required>
+    <input type="tel" placeholder="Phone" required>
+    <input type="password" placeholder="Password" required>
+    <select name="region" id="region" required>
+        <option value="" disabled selected>Select Region</option>
+        <option value="region1">Ashanti</option>
+        <option value="region2">Greater Accra</option>
+    </select>
+    <select name="town" id="town" required>
+        <option value="" disabled selected>Select Town</option>
+        <option value="town1">Kumasi</option>
+        <option value="town2">Accra</option>
+    </select>
+    <button type="submit">Sign Up</button>
+    <a href="Sign In.html" class="login-link">Already have an account? <span>Sign In here</span></a>
+</form>
+
+
+
+</body>
+</html>

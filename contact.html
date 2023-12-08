@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Busy Dine</title>
+        <!-- Font Awesome cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- Custom css file link-->
+        <link rel="stylesheet" href="css/style.css" > 
+        <link rel="icon" type="image/png" href="favicon.png" >
+
+        <!-- Css part -->
+        <style>
+            .image-section {
+                text-align: center;
+                padding: 50px 0;
+            }
+            
+            .image-container {
+                position: relative;
+                max-width: 100%;
+              
+            }
+            
+            .responsive-image {
+                width: 100%;
+                height: auto;
+                border-radius: 20%;
+                padding: 0 7% 0 7%;
+            }
+            
+            .image-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #241f1f;
+                text-align: center;
+            }
+            
+            .image-text h2 {
+                font-size: 4rem;
+                margin-bottom: 10px;
+            }
+
+            @media (max-width:450px) {
+            
+            .image-text h2 {
+                font-size: 2.5rem;
+           
+            }
+        }
+            
+            
+        </style>
+
+    </head>
+    <body>
+<!-- Header section starts -->
+    <header class="header">
+        <a href="#" class="logo" > <i class="fas fa-utensils" > </i> Busy Dine </a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="index.html#order">Book</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="cart-btn" class="fas fa-shopping-cart"></div>
+            <!--add link to login page-->
+            <div id="login-btn" class="fas fa-user" onclick="openInSameWindow('js/index.html')"> </div>
+        </div>
+    </header>
+<!-- Header section ends -->
+
+<!-- Image with text section starts -->
+<section class="image-section">
+    <div class="image-container">
+        <img src="images/pizza/contact_us.jpg" alt="" class="responsive-image">
+        <div class="image-text">
+            <h2>Get in touch ☎️</h2>
+        </div>
+    </div>
+</section>
+<!-- Image with text section ends -->
+
+
+<!--contact section starts-->
+<section class="order" id="order">
+
+  <form action="https://formspree.io/f/mleyqnqw" method="POST">
+
+    <div class="flex">
+      <label class="inputBox">
+        <span>full name</span>
+        <input type="text" placeholder="your full name" name="fullname">
+      </label>
+      <label class="inputBox">
+        <span>subject</span>
+        <input type="text" placeholder="subject" name="subject">
+      </label>
+      <label class="inputBox">
+        <span>email</span>
+        <input type="email" placeholder="your email" name="email">
+      </label>
+
+      <label class="inputBox">
+        <span>phone number</span>
+        <input type="text" placeholder="phone" name="phone">
+      </label>
+    
+    </div>
+
+    <div class="flex">
+     
+        <label class="inputBox">
+          <span>message </span>
+          <textarea placeholder="message" id="" cols="30" rows="10" name="message"></textarea>
+        </label>
+
+        <label class="inputBox">
+            <span>How did you find us ?</span>
+            <select name="find_us">
+                <option value="search_engine">Search Engine</option>
+                <option value="social_media">Social Media</option>
+                <option value="friend">Friend/Family Recommendation</option>
+              </select>
+          </label>
+       
+      </div>
+
+
+
+    <button style="margin-left: 40%;" type="submit" value="proceed to book" class="btn">Hit Us Up</button>
+
+  </form>
+</section>
+<!--contact us section ends-->
+
+
+<!--footer section starts-->
+<section class="footer">
+  <div class="box-container">
+
+    <div class="box">
+      <h3>our menu</h3>
+      <a href="#pizza"> <i class="fas fa-arrow-right"></i> Special Pizza</a>
+      <a href="#drinks"> <i class="fas fa-arrow-right"></i> Special Drinks</a>
+    </div>
+
+    
+    <div class="box">
+      <h3>quick links</h3>
+      <a href="#home"> <i class="fas fa-arrow-right"></i> Home</a>
+      <a href="#about"> <i class="fas fa-arrow-right"></i> About</a>
+      <a href="#menu"> <i class="fas fa-arrow-right"></i> Menu</a>
+      <a href="#order"> <i class="fas fa-arrow-right"></i> Book</a>
+    </div>
+
+    <div class="box">
+      <h3>Extra links</h3>
+      <a href="#"> <i class="fas fa-arrow-right"></i> My Order</a>
+      <a href="#"> <i class="fas fa-arrow-right"></i> Register</a>
+      <a href="#"> <i class="fas fa-arrow-right"></i> Login </a>
+    </div>
+
+    <div class="box">
+      <h3>opening hours</h3>
+      <p>Monday : 7:30am to 11:30pm</p>
+      <p>Tuesday : 7:30am to 11:30pm</p>
+      <p>Wednesday : 7:30am to 11:30pm</p>
+      <p>Thursday : 7:30am to 11:30pm</p>
+      <p>Friday : 7:30am to 11:30pm</p>
+      <p>saturday : 9:30am to 10:00pm</p>
+      <p>saturday : 9:30am to 10:00pm</p>
+    </div>
+
+  </div>
+
+  <div class="bottom">
+
+    <div class="share">
+      <a href="#" class="fab fa-facebook-f"></a>
+      <a href="#" class="fab fa-twitter"></a>
+      <a href="#" class="fab fa-instagram"></a>
+    </div>
+
+    <div class="credit">Copyright <span>Busy Dine</span> © 2023. All Rights Reserved.</div>
+
+  </div>   
+
+</section> 
+
+<!--Whatsapp btn-->    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone=233578101031&text=Welcome%20to%20Busy%20
+Dine%20" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+<!--footer section ends-->
+
+
+
+    <!-- Custom JS file link -->
+    <script src="js/script.js"></script>
+    </body>
+</html>

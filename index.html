@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Busy Dine</title>
+        <!-- Font Awesome cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- Custom css file link-->
+        <link rel="stylesheet" href="css/style.css" > 
+        <link rel="icon" type="image/png" href="favicon.png" >
+
+    </head>
+    <body>
+<!-- Header section starts -->
+    <header class="header">
+        <a href="#" class="logo" > <i class="fas fa-utensils" > </i> Busy Dine </a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="About.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="#order">Book</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="cart-btn" class="fas fa-shopping-cart"></div>
+            <!--add link to login page-->
+            <div id="login-btn" class="fas fa-user" onclick="openInSameWindow('Sign Up.html')"> </div>
+        </div>
+    </header>
+<!-- Header section ends -->
+
+<!-- Home section starts -->
+<section class="home" id="home">
+        <div class="content">
+            <span> Welcome foodies </span>
+            <h3>different spices for the different tastes 😋 </h3>
+            <p>Make yourself confortable !</p>
+            <a href="menu.html" class="btn">order now</a>
+        </div>
+
+        <div class="image">
+            <img src="images/pizza/classic pizza/Sausage Pizza with Roasted Peppers and Onions.jpg" alt="" class="home-img" >   
+        </div>
+</section>
+<!-- Home section ends -->
+
+<!-- shopping-cart starts -->
+<section class="shopping-cart-container">
+  <div class="products-container">
+    <h3 class="title">products</h3>
+
+    <div class="box-container">
+    <div class="box">
+      <i class="fas fa-times"></i>
+        <img src="images/pizza/BBQ-meat pizza.png" alt="">
+        <div class="content">
+          <h3>delicious food</h3>
+          <span>quantity :</span>
+          <input type="number" name="" value="1" id="">
+          <br>
+          <label for="pizza-size"><span>Size:</span></label>
+          <select id="pizza-size" name="pizza-size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <br>
+          <span> price : </span>
+          <span class="price"> ₵50.00 </span>
+        </div>
+    </div>
+
+    
+    <div class="box">
+      <i class="fas fa-times"></i>
+        <img src="images/pizza/Hawaiian pizza.png" alt="">
+        <div class="content">
+          <h3>delicious food</h3>
+          <span>quantity :</span>
+          <input type="number" name="" value="1" id="">
+          <br>
+          <label for="pizza-size"><span>Size:</span></label>
+          <select id="pizza-size" name="pizza-size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <br>
+          <span> price : </span>
+          <span class="price"> ₵50.00 </span>
+        </div>
+    </div>
+
+    
+    <div class="box">
+      <i class="fas fa-times"></i>
+        <img src="images/pizza/Tropical-chicken.png" alt="">
+        <div class="content">
+          <h3>delicious food</h3>
+          <span>quantity :</span>
+          <input type="number" name="" value="1" id="">
+          <br>
+          <label for="pizza-size"><span>Size:</span></label>
+          <select id="pizza-size" name="pizza-size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <br>
+          <span> price : </span>
+          <span class="price"> ₵50.00 </span>
+        </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="cart-total">
+    <h3 class="title"> cart total</h3>
+
+    <div class="box">
+      <h3 class="subtotal"> subtotal : <span>₵150.00</span></h3>
+      <h3 class="total">total : <span>₵150.00</span></h3>
+
+      <a href="#" class="btn">proceed to checkout</a>
+    </div>
+  </div>
+
+</section>
+<!-- shopping-cart ends -->
+
+<!-- About section starts -->
+<section class="about" id="about">
+    <div class="image">
+        <img src="images/restau.jpg" alt="">
+    </div>
+
+    <div class="content">
+        <span>why choose us?</span>
+        <h3 class="title" >what's make our food so special</h3>
+        <p>The heart we put into the preparation makes our dishes unique 😉</p>
+        <a href="About.html" class="btn">read more</a>
+        <div class="icons-container">
+            <div class="icons">
+                <img src="images/cat1.png" alt="">
+                <h3>fast delivery</h3>
+            </div>
+            <div class="icons">
+                <img src="images/cat2.png" alt="">
+                <h3>frech food</h3>
+            </div>
+            <div class="icons">
+                <img src="images/cat3.png" alt="">
+                <h3>best quality</h3>
+            </div>
+            <div class="icons">
+                <img src="images/cat4.png" alt="">
+                <h3>24/7 support</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About section fin -->
+
+<!-- Popular section debut -->
+<section class="popular" id="menu">
+    <div class="heading" id="pizza">
+        <span>Our Menu</span>
+        <h3>our special dishes</h3>
+    </div>
+    <a href="#" class="btn2">More</a>
+    <div class="box-container">
+
+        <div class="box">
+          <!-- <a href="#" class="fas fa-heart"></a> -->
+          <div class="image">
+            <img src="images/pizza/Tropical-chicken.png" alt="">
+          </div> 
+          <div class="content">
+            <h3>Tropical-chicken</h3>
+            <p>Delicious pizza topped with grilled chicken,<br>
+               mozzarella cheese, and savory sauce.<br> </p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">₵50.00 <span>₵60.00</span></div>
+            <a href="#" class="btn">add to cart</a>
+          </div>
+        </div>
+
+        <div class="box">
+            <!-- <a href="#" class="fas fa-heart"></a> -->
+            <div class="image">
+              <img src="images/pizza/BBQ-meat pizza.png" alt="">
+            </div> 
+            <div class="content">
+              <h3>BBQ-meat pizza</h3>
+              <p>Delicious pizza topped with grilled chicken,<br>
+                mozzarella cheese, and savory sauce.<br> </p>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="price">₵50.00 <span>₵60.00</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <!-- <a href="#" class="fas fa-heart"></a> -->
+            <div class="image">
+              <img src="images/pizza/Cheese pizza.png" alt="">
+            </div> 
+            <div class="content">
+              <h3>Cheese pizza</h3>
+              <p>Delicious pizza topped with grilled chicken,<br>
+                mozzarella cheese, and savory sauce.<br> </p>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="price">₵50.00 <span>₵60.00</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <!-- <a href="#" class="fas fa-heart"></a> -->
+            <div class="image">
+              <img src="images/pizza/Chicken-cheese pizza.png" alt="">
+            </div> 
+            <div class="content">
+              <h3>Chicken-cheese pizza</h3>
+              <p>Delicious pizza topped with grilled chicken,<br>
+                mozzarella cheese, and savory sauce.<br> </p>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="price">₵50.00 <span>₵60.00</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <!-- <a href="#" class="fas fa-heart"></a> -->
+            <div class="image">
+              <img src="images/pizza/Fiery-veg pizza.png" alt="">
+            </div> 
+            <div class="content">
+              <h3>Fiery-veg pizza</h3>
+              <p>Delicious pizza topped with grilled chicken,<br>
+                mozzarella cheese, and savory sauce.<br> </p>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="price">₵50.00 <span>₵60.00</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <!-- <a href="#" class="fas fa-heart"></a> -->
+            <div class="image">
+              <img src="images/pizza/Chilli-chicken pizza.png" alt="">
+            </div> 
+            <div class="content">
+              <h3>Chilli-chicken pizza</h3>
+              <p>Delicious pizza topped with grilled chicken,<br>
+                mozzarella cheese, and savory sauce.<br> </p>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="price">₵50.00 <span>₵60.00</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <!-- <a href="#" class="fas fa-heart"></a> -->
+            <div class="image">
+              <img src="images/pizza/Hawaiian pizza.png" alt="">
+            </div> 
+            <div class="content">
+              <h3>hawaiian_pizza_sh.0</h3>
+              <p>Delicious pizza topped with grilled chicken,<br>
+                mozzarella cheese, and savory sauce.<br> </p>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="price">₵50.00 <span>₵60.00</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <!-- <a href="#" class="fas fa-heart"></a> -->
+            <div class="image">
+              <img src="images/pizza/Sussage Pizza.png" alt="">
+            </div> 
+            <div class="content">
+              <h3>Sausage Pizza </h3>
+              <p>Delicious pizza topped with grilled chicken,<br>
+                mozzarella cheese, and savory sauce.<br> </p>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="price">₵50.00 <span>₵60.00</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div>
+
+    </div>
+</section>
+<!-- Popular section fin -->
+
+
+<!-- banner section debut -->
+<section class="banner">
+
+<div class="row-banner">
+  <div class="content">
+    <span>double cheese</span>
+    <h3>burger</h3>
+    <p>with cococola and fries</p>
+    <a href="#" class="btn">order now</a>
+  </div>
+</div> 
+
+<!-- Populaire 2 debut -->
+
+<section class="popular" id="menu">
+  <div class="heading" id="drinks">
+      <span>Our Menu</span>
+      <h3>Special Drinks</h3>
+  
+  </div>
+  <a href="#" class="btn3">More</a>
+  <div class="box-container">
+
+      <div class="box">
+          <!-- <a href="#" class="fas fa-heart"></a> -->
+          <div class="image">
+            <img src="images/Drinks/don simon.png" alt="">
+          </div> 
+          <div class="content">
+            <h3>Don-simon</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">₵25.00 <span>₵30.00</span></div>
+            <a href="#" class="btn">add to cart</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <!-- <a href="#" class="fas fa-heart"></a> -->
+          <div class="image">
+            <img src="images/Drinks/ceres-orange.png" alt="">
+          </div> 
+          <div class="content">
+            <h3>Ceres-Orange</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">₵30.00 <span>₵35.00</span></div>
+            <a href="#" class="btn">add to cart</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <!-- <a href="#" class="fas fa-heart"></a> -->
+          <div class="image">
+            <img src="images/Drinks/frutelli.png" alt="">
+          </div> 
+          <div class="content">
+            <h3>Frutelli</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">₵25.00 <span>₵30.00</span></div>
+            <a href="#" class="btn">add to cart</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <!-- <a href="#" class="fas fa-heart"></a> -->
+          <div class="image">
+            <img src="images/Drinks/Coke.png" alt="">
+          </div> 
+          <div class="content">
+            <h3>Coca-Cola</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">₵10.00 <span>₵15.00</span></div>
+            <a href="#" class="btn">add to cart</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <!-- <a href="#" class="fas fa-heart"></a> -->
+          <div class="image">
+            <img src="images/Drinks/Fanta.png" alt="">
+          </div> 
+          <div class="content">
+            <h3>Fanta</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">₵10.00 <span>₵15.00</span></div>
+            <a href="#" class="btn">add to cart</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <!-- <a href="#" class="fas fa-heart"></a> -->
+          <div class="image">
+            <img src="images/Drinks/Sprite.png" alt="">
+          </div> 
+          <div class="content">
+            <h3>Sprite</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">₵10.00 <span>₵15.00</span></div>
+            <a href="#" class="btn">add to cart</a>
+          </div>
+        </div>
+
+  </div>
+</section>
+
+<!-- Populaire 2 fin -->
+
+<div class="grid-banner">
+
+  <div class="grid">
+    <img src="images/pizza/Red Swan Pizza.jpg" alt="" >
+    <div class="content">
+      <span>special Tuesday</span>
+      <h3>up to 25% off</h3>
+     <!--<a href="#" class="btn">order now</a>-->
+    </div>
+  </div>
+
+  <div class="grid">
+    <img src="images/pizza/triple-treat.jpeg" alt="" >
+    <div class="content center">
+      <span>familly deal</span>
+      <h3>come and enjoy</h3>
+      <!--<a href="#" class="btn">order now</a>-->
+    </div>
+  </div>
+
+  <div class="grid">
+    <img src="images/pizza/mega.jpeg" alt="" >
+    <div class="content">
+      <span>special offer ₵200</span>
+      <h3>Get our special mega pizza</h3>
+     <!-- <a href="#" class="btn">order now</a>-->
+    </div>
+  </div>
+</div>
+
+</section>
+<!-- banner section ends -->
+
+<!--Services book starts-->
+<section class="order" id="order">
+
+  <div class="heading">
+    <span>Book now</span>
+    <h3>book our services for special event 😉 </h3>
+  </div>
+
+  <div class="icons-container">
+
+    <div class="icons">
+      <img src="images/schedule.png" alt="">
+      <h3>7:30am to 11:30pm</h3>
+    </div>
+
+    <div class="icons">
+      <img src="images/phone.png" alt="">
+      <h3>+233 57 810 1031</h3>
+    </div>
+
+    <div class="icons">
+      <img src="images/placeholder.png" alt="">
+      <h3>Accra, Busy Dine - GPQP+86M</h3>
+    </div>
+
+  </div>
+
+
+  <form  action="https://formspree.io/f/mleyqnqw"
+  method="POST">
+
+    <div class="flex">
+      <label class="inputBox">
+        <span>your name</span>
+        <input type="text" placeholder="customer's name" name="name">
+      </label>
+      <label class="inputBox">
+        <span>phone number</span>
+        <input type="tel" placeholder="customer's phone number" name="phone">
+      </label>
+    </div>
+
+    <div class="flex">
+      <label class="inputBox">
+        <span>Type of event</span>
+        <input type="text" placeholder="Birthday party...?" name="details">
+      </label>
+      <label class="inputBox">
+        <span>how much</span>
+        <input type="number" placeholder="orders or your budget for the event" name="budget">
+      </label>
+    </div>
+
+    <div class="flex">
+      <label class="inputBox">
+        <span>address</span>
+        <input type="text" placeholder="location" name="address">
+      </label>
+      <label class="inputBox">
+        <span>pick up time</span>
+        <input type="datetime-local" name="pick up time">
+      </label>
+    </div>
+
+    <div class="flex">
+      <label class="inputBox">
+        <span>your order </span>
+        <textarea placeholder="food you need" cols="30" rows="10" name="food needed"></textarea>
+      </label>
+      <label class="inputBox">
+        <iframe class="map"  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3971.
+        19318879418!2d-0.2670280258226249!3d5.538342833828657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+        1!3m2!1m1!2s6CQXGPQP%2B86M!5e0!3m2!1sen!2sgh!4v1692673390424!5m2!1sen!2sgh" width="600"
+         allowfullscreen="" loading="lazy" name="lacation">
+        </iframe>
+      </label>
+    </div>
+
+    <button type="submit" class="btn">proceed to book</button>
+
+  </form>
+</section>
+<!--Services book ends-->
+
+
+<!--footer section starts-->
+<section class="footer">
+  <div class="box-container">
+
+    <div class="box">
+      <h3>our menu</h3>
+      <a href="#pizza"> <i class="fas fa-arrow-right"></i> Special Pizza</a>
+      <a href="#drinks"> <i class="fas fa-arrow-right"></i> Special Drinks</a>
+    </div>
+
+    
+    <div class="box">
+      <h3>quick links</h3>
+      <a href="#home"> <i class="fas fa-arrow-right"></i> Home</a>
+      <a href="About.html"> <i class="fas fa-arrow-right"></i> About</a>
+      <a href="menu.html"> <i class="fas fa-arrow-right"></i> Menu</a>
+      <a href="#order"> <i class="fas fa-arrow-right"></i> Book</a>
+    </div>
+
+    <div class="box">
+      <h3>Extra links</h3>
+      <a href="#"> <i class="fas fa-arrow-right"></i> My Order</a>
+      <a href="Sign Up.html"> <i class="fas fa-arrow-right"></i> Register</a>
+      <a href="Sign In.html"> <i class="fas fa-arrow-right"></i> Login </a>
+    </div>
+
+    <div class="box">
+      <h3>opening hours</h3>
+      <p>Monday : 7:30am to 11:30pm</p>
+      <p>Tuesday : 7:30am to 11:30pm</p>
+      <p>Wednesday : 7:30am to 11:30pm</p>
+      <p>Thursday : 7:30am to 11:30pm</p>
+      <p>Friday : 7:30am to 11:30pm</p>
+      <p>saturday : 9:30am to 10:00pm</p>
+      <p>saturday : 9:30am to 10:00pm</p>
+    </div>
+
+  </div>
+
+  <div class="bottom">
+
+    <div class="share">
+      <a href="#" class="fab fa-facebook-f"></a>
+      <a href="#" class="fab fa-twitter"></a>
+      <a href="#" class="fab fa-instagram"></a>
+    </div>
+
+    <div class="credit">Copyright <span>Busy Dine</span> © 2023. All Rights Reserved.</div>
+
+  </div>
+
+   <!--Whatsapp btn-->
+    
+   
+
+</section> <!--Whatsapp btn-->
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone=233578101031&text=Welcome%20to%20Busy%20
+Dine%20" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+<!--footer section ends-->
+
+
+
+    <!-- Custom JS file link -->
+    <script src="js/script.js"></script>
+    </body>
+</html>
