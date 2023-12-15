@@ -1,0 +1,28 @@
+{
+  "name": "busy_dine",
+  "version": "1.0.0",
+  "description": "backend for food vendor",
+  "main": "server.js",
+  "scripts": {
+    "test": "",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "gridfs-stream": "^1.1.1",
+    "json-web-token": "^3.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
+    "mongoose": "^8.0.3",
+    "multer": "^1.4.4",
+    "multer-gridfs-storage": "^5.0.2",
+    "multer-storage-gridfs": "^1.5.0",
+    "nodemon": "^3.0.2"
+  }
+}

@@ -10,122 +10,123 @@
         <!-- Custom css file link-->
         <link rel="stylesheet" href="css/style.css" > 
         <link rel="icon" type="image/png" href="favicon.png" >
+<style>
+  html,
+body {
+  position: relative;
+  height: 100%;
+}
 
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
     </head>
+
     <body>
 <!-- Header section starts -->
-    <header class="header">
-        <a href="#" class="logo" > <i class="fas fa-utensils" > </i> Busy Dine </a>
+<header class="header">
+  <a href="#" class="logo" > <i class="fas fa-utensils" > </i> Busy Dine </a>
 
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="About.html">About</a>
-            <a href="menu.html">Menu</a>
-            <a href="index.html#order">Book</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+  <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="#order">Book</a>
+      <a href="contact.html">Contact</a>
+  </nav>
 
-        <div class="icons">
-            <div id="menu-btn" class="fas fa-bars"></div>
-            <div id="cart-btn" class="fas fa-shopping-cart"></div>
-            <!--add link to login page-->
-            <div id="login-btn" class="fas fa-user" onclick="openInSameWindow('Sign Up.html')"> </div>
-        </div>
-    </header>
+  <div class="icons">
+      <a id="menu-btn" class="fas fa-bars"></a>
+      <a id="cart-btn" class="fas fa-shopping-cart" href="cart.html"></a>
+      <!--add link to login page-->
+      <a id="login-btn" class="fas fa-user" href="Sign Up.html"> </a>
+  </div>
+</header>
 <!-- Header section ends -->
 
 
-<!-- shopping-cart starts -->
-<section class="shopping-cart-container">
-  <div class="products-container">
-    <h3 class="title">products</h3>
 
-    <div class="box-container">
-    <div class="box">
-      <i class="fas fa-times"></i>
-        <img src="images/pizza/BBQ-meat pizza.png" alt="">
-        <div class="content">
-          <h3>delicious food</h3>
-          <span>quantity :</span>
-          <input type="number" name="" value="1" id="">
-          <br>
-          <label for="pizza-size"><span>Size:</span></label>
-          <select id="pizza-size" name="pizza-size">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-          <br>
-          <span> price : </span>
-          <span class="price"> ₵50.00 </span>
-        </div>
-    </div>
+<!-- MENU -->
+<section>
+  <h3 class="title">Our Special Dishes</h3>
+<div class="box-container dishes"></div>
+<h3 class="title">Our Go to</h3>
 
-    
-    <div class="box">
-      <i class="fas fa-times"></i>
-        <img src="images/pizza/Hawaiian pizza.png" alt="">
-        <div class="content">
-          <h3>delicious food</h3>
-          <span>quantity :</span>
-          <input type="number" name="" value="1" id="">
-          <br>
-          <label for="pizza-size"><span>Size:</span></label>
-          <select id="pizza-size" name="pizza-size">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-          <br>
-          <span> price : </span>
-          <span class="price"> ₵50.00 </span>
-        </div>
-    </div>
+<div class="box-container food"></div>
+<h3 class="title">Our Special Drinks</h3>
 
-    
-    <div class="box">
-      <i class="fas fa-times"></i>
-        <img src="images/pizza/Tropical-chicken.png" alt="">
-        <div class="content">
-          <h3>delicious food</h3>
-          <span>quantity :</span>
-          <input type="number" name="" value="1" id="">
-          <br>
-          <label for="pizza-size"><span>Size:</span></label>
-          <select id="pizza-size" name="pizza-size">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-          <br>
-          <span> price : </span>
-          <span class="price"> ₵50.00 </span>
-        </div>
-    </div>
-  </div>
-  </div>
-
-  <div class="cart-total">
-    <h3 class="title"> cart total</h3>
-
-    <div class="box">
-      <h3 class="subtotal"> subtotal : <span>₵150.00</span></h3>
-      <h3 class="total">total : <span>₵150.00</span></h3>
-
-      <a href="#" class="btn">proceed to checkout</a>
-    </div>
-  </div>
-
+<div class="box-container drinks"></div>
 </section>
-<!-- shopping-cart ends -->
 
+<!-- 
+<swiper-container class="mySwiper" id="dishes" space-between="30" pagination="false" slides-per-view="5" navigation="true">
+<swiper-slide>Slide 1</swiper-slide>
+<swiper-slide>Slide 1</swiper-slide>
+<swiper-slide>Slide 1</swiper-slide>
+<swiper-slide>Slide 1</swiper-slide><swiper-slide>Slide 1</swiper-slide>
+<swiper-slide>Slide 1</swiper-slide>
 
+</swiper-container> -->
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script>
+  const swiperEl = document.querySelector('swiper-container')
+  Object.assign(swiperEl, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 50,
+      },
+    },
+  });
+  swiperEl.initialize();
+</script> -->
 
 
 <!--footer section starts-->
 <section class="footer">
   <div class="box-container">
-
+    
     <div class="box">
       <h3>our menu</h3>
       <a href="#pizza"> <i class="fas fa-arrow-right"></i> Special Pizza</a>
@@ -188,6 +189,8 @@ Dine%20" class="float" target="_blank">
 <!--footer section ends-->
 
     <!-- Custom JS file link -->
-    <script src="js/script.js"></script>
-    </body>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/menu.js"></script>
+    <script src="js/nav.js"></script>
+  </body>
 </html>

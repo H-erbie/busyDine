@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busy Dine</title>
+        <!-- Font Awesome cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- Custom css file link-->
+        <link rel="stylesheet" href="css/style.css" > 
+        <link rel="icon" type="image/png" href="favicon.png" >
+</head>
+<body>
+    
+<!-- Header section starts -->
+<header class="header">
+    <a href="#" class="logo" > <i class="fas fa-utensils" > </i> Busy Dine </a>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="index.html#order">Book</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="cart-btn" class="fas fa-shopping-cart" onclick="openInSameWindow('cart.html')"></div>
+        <!--add link to login page-->
+        <div id="login-btn" class="fas fa-user" onclick="openInSameWindow('Sign Up.html')"> </div>
+    </div>
+</header>
+<!-- Header section ends -->
+
+
+
+<!-- shopping-cart starts -->
+<section class="shopping-cart-container">
+   
+    <div class="products-container ">
+      <h3 class="title">products</h3>
+  
+      <div class="box-container cart">
+        <div class="empty-cart">Cart is empty    <i class="fas fa-shopping-cart"></i>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+    <div class="cart-total">
+      <h3 class="title"> cart total</h3>
+  
+      <div class="box">
+        <h3 class="subtotal"> subtotal : <span>₵150.00</span></h3>
+        <h3 class="total">total : <span>₵150.00</span></h3>
+  
+        <a href="#" class="btn">proceed to checkout</a>
+      </div>
+    </div>
+  
+  </section>
+
+  <!-- shopping-cart ends -->
+
+  <!--footer section starts-->
+<section class="footer">
+    <div class="box-container">
+      
+      <div class="box">
+        <h3>our menu</h3>
+        <a href="#pizza"> <i class="fas fa-arrow-right"></i> Special Pizza</a>
+        <a href="#drinks"> <i class="fas fa-arrow-right"></i> Special Drinks</a>
+      </div>
+  
+      
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="index.html"> <i class="fas fa-arrow-right"></i> Home</a>
+        <a href="About.html"> <i class="fas fa-arrow-right"></i> About</a>
+        <a href="menu.html"> <i class="fas fa-arrow-right"></i> Menu</a>
+        <a href="index.html#order"> <i class="fas fa-arrow-right"></i> Book</a>
+      </div>
+  
+      <div class="box">
+        <h3>Extra links</h3>
+        <a href="#"> <i class="fas fa-arrow-right"></i> My Order</a>
+        <a href="Sign Up.html"> <i class="fas fa-arrow-right"></i> Register</a>
+        <a href="Sign In.html"> <i class="fas fa-arrow-right"></i> Login </a>
+      </div>
+  
+      <div class="box">
+        <h3>opening hours</h3>
+        <p>Monday : 7:30am to 11:30pm</p>
+        <p>Tuesday : 7:30am to 11:30pm</p>
+        <p>Wednesday : 7:30am to 11:30pm</p>
+        <p>Thursday : 7:30am to 11:30pm</p>
+        <p>Friday : 7:30am to 11:30pm</p>
+        <p>saturday : 9:30am to 10:00pm</p>
+        <p>saturday : 9:30am to 10:00pm</p>
+      </div>
+  
+    </div>
+  
+    <div class="bottom">
+  
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+      </div>
+  
+      <div class="credit">Copyright <span>Busy Dine</span> © 2023. All Rights Reserved.</div>
+  
+    </div>
+  
+     <!--Whatsapp btn-->
+      
+     
+  
+  </section> <!--Whatsapp btn-->
+      
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <a href="https://api.whatsapp.com/send?phone=233578101031&text=Welcome%20to%20Busy%20
+  Dine%20" class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+      </a>
+  
+  <!--footer section ends-->
+  <script src="js/cart.js"></script>
+
+      <!-- Custom JS file link -->
+</body>
+</html>

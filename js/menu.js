@@ -1,36 +1,10 @@
+const dishesContainer = document.querySelector(".dishes");
+const drinksContainer = document.querySelector(".drinks");
+let cart = document.querySelector(".shopping-cart-container");
 
 function openInSameWindow(evt) {
   window.location = evt;
 }
-
-
-
-document.querySelector(".home").onmousemove = (e) => {
-  let x = (window.innerWidth - e.pageX * 2) / 90;
-  let y = (window.innerHeight - e.pageY * 2) / 90;
-
-  document.querySelector(
-    ".home .home-img"
-  ).style.transform = `translateX(${y}px)
-    translateY(${x}px)`;
-
-  //document.querySelector('.home .home-beaute-img').style.transform = `translateX(${y}px)
-  //translateY(${x}px)`;
-};
-
-document.querySelector(".home").onmouseleave = (e) => {
-  document.querySelector(".home .home-img").style.transform = `translateX(0px)
-    translateY(0px)`;
-};
-
-// document.querySelector(".home").onmouseleave = (e) => {
-//   document.querySelector(
-//     ".home .home-beaute-img"
-//   ).style.transform = `translateX(0px)
-//     translateY(0px)`;
-// };
-
-const dishContainer = document.querySelector(".dishes");
 
 const fetchAllDishes = async () => {
   try {
@@ -38,7 +12,7 @@ const fetchAllDishes = async () => {
       method: "GET",
     });
     const res = await data.json();
-    localStorage.setItem("Dishes", JSON.stringify(res));
+    localStorage.setItem("Dishes", JSON.stringify(res.dish));
   } catch (error) {
     console.log(error);
   }
@@ -46,9 +20,8 @@ const fetchAllDishes = async () => {
 fetchAllDishes();
 
 const getDishes = JSON.parse(localStorage.getItem("Dishes"));
-
-const dishes = getDishes.dish.splice(0,3);
-dishes.forEach((dish) => {
+const dishes = getDishes.slice(0, 8);
+dishes.forEach((dish, index) => {
   const box = document.createElement("div");
   const price = document.createElement("div");
   const stars = document.createElement("div");
@@ -102,7 +75,83 @@ dishes.forEach((dish) => {
   box.append(imageContainer);
   box.append(content);
 
-  dishContainer.append(box);
+  dishesContainer.append(box);
+
+  a.addEventListener("click", () => {
+    let cartItems = JSON.parse(localStorage.getItem("CartItems")) || [];
+
+    const existingItem = cartItems.find((item) => item.dish._id === dish._id);
+    if (!existingItem) {
+      // Add new item
+      cartItems.push({ dish, quantity: 1 }); // Update quantity as needed
+    } else {
+      // Update existing item
+      existingItem.quantity++;
+    }
+    localStorage.setItem("CartItems", JSON.stringify(cartItems));
+    // console.log(cartItems)
+  });
+});
+
+const extraDishes = getDishes.slice(8);
+const foodContainer = document.querySelector(".food");
+// const dDrinksContainer = document.querySelector('.food')
+extraDishes.forEach((dish, index) => {
+  const box = document.createElement("div");
+  const price = document.createElement("div");
+  const stars = document.createElement("div");
+  const imageContainer = document.createElement("div");
+  const img = document.createElement("img");
+  const content = document.createElement("div");
+  const h3 = document.createElement("h3");
+  const p = document.createElement("p");
+  const a = document.createElement("button");
+  const span = document.createElement("span");
+  const emptySpan = document.createElement("a");
+
+  img.src = "/backend/" + dish.image;
+  img.alt = dish.name;
+  img.style.width = "205px";
+  img.style.height = "150px";
+  box.className = "box";
+  price.className = "price";
+  stars.className = "stars";
+  content.className = "content";
+  imageContainer.className = "image";
+
+  imageContainer.append(img);
+  h3.textContent = dish.name;
+  p.textContent = dish.desc;
+  p.style.textAlign = "center";
+  content.append(h3);
+  content.append(p);
+  for (let j = 0; j < 5; j++) {
+    const i = document.createElement("i");
+
+    if (j < 4) {
+      i.className = "fas fa-star";
+    } else if (j === 4) {
+      i.className = "fas fa-star-half-alt";
+    }
+    stars.append(i);
+  }
+  content.append(stars);
+  span.textContent = " ₵" + dish.previousPrice;
+  price.append("₵" + dish.price);
+  emptySpan.textContent = "   ";
+  price.append(emptySpan);
+  price.append(span);
+
+  content.append(price);
+  a.className = "btn addToCart";
+  a.textContent = "add to cart";
+  content.append(a);
+
+  box.append(imageContainer);
+  box.append(content);
+
+  foodContainer.append(box);
+
   a.addEventListener("click", () => {
     let cartItems = JSON.parse(localStorage.getItem("CartItems")) || [];
 
@@ -125,7 +174,7 @@ const fetchAllDrinks = async () => {
       method: "GET",
     });
     const res = await data.json();
-    localStorage.setItem("Drinks", JSON.stringify(res));
+    localStorage.setItem("Drinks", JSON.stringify(res.drink));
   } catch (error) {
     console.log(error);
   }
@@ -133,8 +182,9 @@ const fetchAllDrinks = async () => {
 fetchAllDrinks();
 const DrinkContainer = document.querySelector(".drinks");
 const getDrinks = JSON.parse(localStorage.getItem("Drinks"));
+console.log(getDrinks)
 
-const drinks = getDrinks.drink.splice(0,4);
+const drinks = getDrinks;
 drinks &&
   drinks.forEach((drink) => {
     const box = document.createElement("div");
@@ -190,11 +240,10 @@ drinks &&
     DrinkContainer.append(box);
     a.addEventListener("click", () => {
       let cartItems = JSON.parse(localStorage.getItem("CartItems")) || [];
-  
-      const existingItem = cartItems.find((item) => item.drink._id === drink._id);
+      const existingItem = cartItems.find((item) => item.dish._id === drink._id);
       if (!existingItem) {
         // Add new item
-        cartItems.push({ drink, quantity: 1 }); // Update quantity as needed
+        cartItems.push({ dish: drink, quantity: 1 }); // Update quantity as needed
       } else {
         // Update existing item
         existingItem.quantity++;
@@ -204,13 +253,4 @@ drinks &&
     });
   });
 
-// const getUserToken =   JSON.parse(localStorage.getItem("jwtToken")) || [];
-//  const payload = jwt.verify(getUserToken, 'BF8665E4BC84D73EB95B579C82816')
-//  console.log(payload)
-
-
-// headers: {
-//   "Content-Type": "application/json"
-// },
-// body: JSON.stringify({
-//   task: newTodos}),
+  

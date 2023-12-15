@@ -8,7 +8,7 @@
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   transition: 0.2s linear;
 }
 
@@ -122,7 +122,59 @@ section {
 .header .navbar a:hover {
   color: #27ae60;
 }
-.header .icons div {
+.close-cart{
+  text-align: right;
+  cursor: pointer;
+  font-size: 4rem
+}
+.user{
+  text-transform: capitalize;
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+
+}
+.profile-container{
+  min-height: calc(100vh - 300px);
+}
+.logout-btn{
+  margin-top: 2rem;
+}
+.userInfo{
+  margin: 2rem auto;
+  width: max-content;
+  font-size: 1.8rem;
+}
+.profile-btns{
+  display: flex; 
+  gap: 2rem;
+}
+.err{
+  color: red;
+  background-color:white;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.del-btn{
+  background-color: red;
+}
+.username{
+  text-transform: capitalize;
+}
+.profile-avatar{
+  padding: 1rem 3.5rem;
+  width: max-content;
+  margin: 0 auto;
+  border-radius: 100%;
+  font-size: 5rem;
+  background-color: #25d366;
+  color: #130f40;
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.header .icons a {
   height: 4.5rem;
   width: 4.5rem;
   line-height: 4.5rem;
@@ -134,7 +186,7 @@ section {
   cursor: pointer;
   text-align: center;
 }
-.header .icons div:hover {
+.header .icons a:hover {
   color: #fff;
   background: #27ae60;
 }
@@ -152,16 +204,11 @@ section {
 
 /* CART PART */
 .shopping-cart-container {
-  position: fixed;
-  top: 8.5rem;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  height: calc(100vh - 8.5rem);
+
+  min-height: calc(100vh - 8.5rem);
   background: #fff;
   overflow-y: scroll;
   padding-bottom: 8rem;
-  display: none;
 }
 .shopping-cart-container.active {
   display: block;
@@ -235,6 +282,14 @@ section {
   font-size: 1.5rem;
   color: #130f40;
   margin: 0.7rem 0;
+}
+.empty-cart{
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.no-display{
+  display: none;
 }
 .shopping-cart-container .cart-total {
   margin-top: 2rem;
@@ -325,10 +380,14 @@ section {
   font-size: 3rem;
   color: #27ae60;
 }
-.about .content .title {
+.about .content .title, .title {
   font-size: 3rem;
   padding-top: 0.5rem;
   color: #130f40;
+}
+.title {
+  text-align: center;
+  margin: 2rem 0;
 }
 .about .content p {
   padding: 1rem 0;
@@ -358,19 +417,19 @@ section {
 }
 
 /* MENU SECTION */
-.popular .box-container {
+.popular .box-container, .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
 }
-.popular .box-container .box {
+.popular .box-container .box, .box-container .box {
   border-radius: 0.5rem;
   position: relative;
   background: #f7f7f7;
   padding: 2rem;
   text-align: center;
 }
-.popular .box-container .box .fa-heart {
+.popular .box-container .box .fa-heart, .box-container .box .fa-heart {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
@@ -378,34 +437,34 @@ section {
   color: #666;
   cursor: pointer;
 }
-.popular .box-container .box .fa-heart:hover {
+.popular .box-container .box .fa-heart:hover, .box-container .box .fa-heart:hover {
   color: #27ae60;
 }
-.popular .box-container .box .image {
+.popular .box-container .box .image , .box-container .box .imgae{
   margin: 1rem 0;
 }
-.popular .box-container .box .image img {
+.popular .box-container .box .image img, .box-container .box .imgae img {
   height: 15rem;
 }
-.popular .box-container .box .content h3 {
+.popular .box-container .box .content h3, .box-container .box .content h3 {
   font-size: 1.8rem;
   color: #130f40;
 }
-.popular .box-container .box .content .stars {
+.popular .box-container .box .content .stars, .box-container .box .content .stars {
   padding: 1rem 0;
   font-size: 1.7rem;
 }
-.popular .box-container .box .content .stars i {
+.popular .box-container .box .content .stars i,.box-container .box .content .stars i  {
   color: gold;
 }
-.popular .box-container .box .content .stars span {
+.popular .box-container .box .content .stars span, .box-container .box .content .stars span {
   color: #666;
 }
-.popular .box-container .box .content .price {
+.popular .box-container .box .content .price, .box-container .box .content .price {
   font-size: 2rem;
   color: #130f40;
 }
-.popular .box-container .box .content .price span {
+.popular .box-container .box .content .price span, .box-container .box .content .price span {
   font-size: 1.5rem;
   color: #666;
   text-decoration: line-through;

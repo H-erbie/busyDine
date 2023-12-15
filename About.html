@@ -92,97 +92,13 @@
         </nav>
 
         <div class="icons">
-            <div id="menu-btn" class="fas fa-bars"></div>
-            <div id="cart-btn" class="fas fa-shopping-cart"></div>
-            <!--add link to login page-->
-            <div id="login-btn" class="fas fa-user" onclick="openInSameWindow('Sign Up.html')"> </div>
-        </div>
+          <a id="menu-btn" class="fas fa-bars"></a>
+          <a id="cart-btn" class="fas fa-shopping-cart" href="cart.html"></a>
+          <!--add link to login page-->
+          <a id="login-btn" class="fas fa-user" href="Sign Up.html"> </a>
+      </div>
     </header> <br> <br> <br>
 <!-- Header section ends -->
-
-<!-- shopping-cart starts -->
-<section class="shopping-cart-container">
-  <div class="products-container">
-    <h3 class="title">products</h3>
-
-    <div class="box-container">
-    <div class="box">
-      <i class="fas fa-times"></i>
-        <img src="images/pizza/BBQ-meat pizza.png" alt="">
-        <div class="content">
-          <h3>delicious food</h3>
-          <span>quantity :</span>
-          <input type="number" name="" value="1" id="">
-          <br>
-          <label for="pizza-size"><span>Size:</span></label>
-          <select id="pizza-size" name="pizza-size">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-          <br>
-          <span> price : </span>
-          <span class="price"> ₵50.00 </span>
-        </div>
-    </div>
-
-    
-    <div class="box">
-      <i class="fas fa-times"></i>
-        <img src="images/pizza/Hawaiian pizza.png" alt="">
-        <div class="content">
-          <h3>delicious food</h3>
-          <span>quantity :</span>
-          <input type="number" name="" value="1" id="">
-          <br>
-          <label for="pizza-size"><span>Size:</span></label>
-          <select id="pizza-size" name="pizza-size">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-          <br>
-          <span> price : </span>
-          <span class="price"> ₵50.00 </span>
-        </div>
-    </div>
-
-    
-    <div class="box">
-      <i class="fas fa-times"></i>
-        <img src="images/pizza/Tropical-chicken.png" alt="">
-        <div class="content">
-          <h3>delicious food</h3>
-          <span>quantity :</span>
-          <input type="number" name="" value="1" id="">
-          <br>
-          <label for="pizza-size"><span>Size:</span></label>
-          <select id="pizza-size" name="pizza-size">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-          <br>
-          <span> price : </span>
-          <span class="price"> ₵50.00 </span>
-        </div>
-    </div>
-  </div>
-  </div>
-
-  <div class="cart-total">
-    <h3 class="title"> cart total</h3>
-
-    <div class="box">
-      <h3 class="subtotal"> subtotal : <span>₵150.00</span></h3>
-      <h3 class="total">total : <span>₵150.00</span></h3>
-
-      <a href="#" class="btn">proceed to checkout</a>
-    </div>
-  </div>
-
-</section>
-<!-- shopping cart ends-->
 
 <!-- Image with text section starts -->
 <section class="image-section">
@@ -350,5 +266,6 @@ Dine%20" class="float" target="_blank">
 
     <!-- Custom JS file link -->
     <script src="js/script.js"></script>
+    <script src="js/nav.js"></script>
     </body>
 </html>
