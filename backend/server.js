@@ -1,4 +1,4 @@
-require('/opt/render/project/node_modules/dotenv').config()
+require('dotenv').config()
 const express = require('express')
 const connectDB = require('./db/connect')
 const userRouter = require('./routes/auth')
