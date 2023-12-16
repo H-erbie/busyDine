@@ -38,7 +38,7 @@ const fetchAllDishes = async () => {
       method: "GET",
     });
     const res = await data.json();
-    localStorage.setItem("Dishes", JSON.stringify(res));
+    localStorage.setItem("Dishes", JSON.stringify(res.dish));
   } catch (error) {
     console.log(error);
   }
@@ -46,9 +46,8 @@ const fetchAllDishes = async () => {
 fetchAllDishes();
 
 const getDishes = JSON.parse(localStorage.getItem("Dishes"));
-
-const dishes = getDishes.dish.splice(0,3);
-dishes.forEach((dish) => {
+const dishes = getDishes.slice(0, 3);
+dishes.forEach((dish, index) => {
   const box = document.createElement("div");
   const price = document.createElement("div");
   const stars = document.createElement("div");
@@ -103,6 +102,7 @@ dishes.forEach((dish) => {
   box.append(content);
 
   dishContainer.append(box);
+
   a.addEventListener("click", () => {
     let cartItems = JSON.parse(localStorage.getItem("CartItems")) || [];
 
@@ -125,7 +125,7 @@ const fetchAllDrinks = async () => {
       method: "GET",
     });
     const res = await data.json();
-    localStorage.setItem("Drinks", JSON.stringify(res));
+    localStorage.setItem("Drinks", JSON.stringify(res.drink));
   } catch (error) {
     console.log(error);
   }
@@ -133,8 +133,9 @@ const fetchAllDrinks = async () => {
 fetchAllDrinks();
 const DrinkContainer = document.querySelector(".drinks");
 const getDrinks = JSON.parse(localStorage.getItem("Drinks"));
+console.log(getDrinks)
 
-const drinks = getDrinks.drink.splice(0,4);
+const drinks = getDrinks.slice(0, 4);
 drinks &&
   drinks.forEach((drink) => {
     const box = document.createElement("div");
@@ -190,11 +191,10 @@ drinks &&
     DrinkContainer.append(box);
     a.addEventListener("click", () => {
       let cartItems = JSON.parse(localStorage.getItem("CartItems")) || [];
-  
-      const existingItem = cartItems.find((item) => item.drink._id === drink._id);
+      const existingItem = cartItems.find((item) => item.dish._id === drink._id);
       if (!existingItem) {
         // Add new item
-        cartItems.push({ drink, quantity: 1 }); // Update quantity as needed
+        cartItems.push({ dish: drink, quantity: 1 }); // Update quantity as needed
       } else {
         // Update existing item
         existingItem.quantity++;
@@ -202,9 +202,7 @@ drinks &&
       localStorage.setItem("CartItems", JSON.stringify(cartItems));
       // console.log(cartItems)
     });
-  });
-
-// const getUserToken =   JSON.parse(localStorage.getItem("jwtToken")) || [];
+  });// const getUserToken =   JSON.parse(localStorage.getItem("jwtToken")) || [];
 //  const payload = jwt.verify(getUserToken, 'BF8665E4BC84D73EB95B579C82816')
 //  console.log(payload)
 

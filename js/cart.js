@@ -11,7 +11,7 @@ document.querySelector("#cart-btn").addEventListener("click", () => {
 });
 const emptyCart = document.querySelector(".empty-cart");
 
-let total = 0;
+let total = 0; // Parse current total
 
 cartItems.forEach((cartItem, index) => {
   if (cartItems.length > 0) {
@@ -59,23 +59,68 @@ cartItems.forEach((cartItem, index) => {
   box.append(content);
   cartContainer.append(box);
 
+  input.addEventListener("change", (event) => {
+    // Update quantity based on user input
+    const newQuantity = event.target.value;
+    const price = cartItem.dish.price;
+    if (newQuantity < cartItem.quantity) {
+      total -= price;
+      
+    }
+    if (newQuantity > cartItem.quantity) {
+        total += price;
+    }
+    cartItem.quantity = newQuantity; // Update original cart item object
+    localStorage.setItem("CartTotal", JSON.stringify(total));
+
+    // Update price based on new quantity
+    // const priceChange = price * (newQuantity - input.value); // Difference from previous value
+
+    // Update total
+
+    // Update subtotal and total display
+    cartSubtotal.textContent = "₵" + total;
+    cartTotal.textContent = "₵" + total;
+    console.log(input.value);
+    // Update localStorage with updated quantity
+    localStorage.setItem("CartItems", JSON.stringify(cartItems));
+  });
+
   i.addEventListener("click", () => {
     let carts = JSON.parse(localStorage.getItem("CartItems"));
     const updatedCartItems = carts.filter(
       (item) => item.dish._id !== cartItem.dish._id
     );
-    console.log(carts)
+    console.log(carts);
     localStorage.setItem("CartItems", JSON.stringify(updatedCartItems));
     box.style.display = "none";
-    console.log(JSON.parse(localStorage.getItem("CartItems")));
-    cartItems.forEach((item) => {
-      total += item.quantity * item.dish.price;
-    });
+
+    const price = cartItem.dish.price;
+    const quantity = cartItem.quantity;
+
+    total -= price * quantity;
+    localStorage.setItem("CartTotal", JSON.stringify(total));
+
+    cartSubtotal.textContent = "₵" + total;
+    cartTotal.textContent = "₵" + total;
+
+    if (carts.length === 0) {
+      emptyCart.classList.remove("no-display");
+    }
   });
 });
+// let total = 0
 cartItems.forEach((item) => {
   total += item.quantity * item.dish.price;
+  localStorage.setItem("CartTotal", JSON.stringify(total));
 });
-
 cartSubtotal.textContent = "₵" + total;
 cartTotal.textContent = "₵" + total;
+const checkBtn = document.querySelector('.checkout')
+const userInfo = JSON.parse(localStorage.getItem('user')) || []
+
+if(userInfo){
+    checkBtn.href = 'checkout.html'
+}
+// checkBtn.add('click', ()=>{
+// })

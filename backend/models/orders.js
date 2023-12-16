@@ -34,7 +34,7 @@ const OrdersSchema = new mongoose.Schema(
       },
       email: {
         type: String,
-        required: [true, "please provide purchaser name"],
+        required: [true, "please provide purchaser email"],
       },
       userId: {
         type: String,

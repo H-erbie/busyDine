@@ -36,29 +36,28 @@
 
 
 <!-- shopping-cart starts -->
-<section class="shopping-cart-container">
-   
-    <div class="products-container ">
-      <h3 class="title">products</h3>
-  
-      <div class="box-container cart">
-        <div class="empty-cart">Cart is empty    <i class="fas fa-shopping-cart"></i>
+<section class="profile-container">
+    <h3 class="title">Checkout Summary</h3>
+    <a href='cart.html'><p class="text text-right">
+        Edit cart
+    </p></a>
+    <div class="checkout products-container ">
+    
+        <div class="box-container cart">
+          </div>
         </div>
       </div>
-    </div>
-    </div>
-  
-    <div class="cart-total">
-      <h3 class="title"> cart total</h3>
-  
-      <div class="box">
-        <h3 class="subtotal"> subtotal : <span></span></h3>
-        <h3 class="total">total : <span></span></h3>
-  
-        <a href="Sign Up.html" class="btn checkout">proceed to checkout</a>
       </div>
-    </div>
-  
+    
+      <div class="cart-total checkout-total">
+    
+        <div class="box">
+          <h3 class="subtotal title"> subtotal : <span></span></h3>
+          <h3 class="total title">total : <span></span></h3>
+          <button onclick="payWithPaystack()" class="btn">pay with paystack</button>
+        </div>
+      </div>
+   
   </section>
 
   <!-- shopping-cart ends -->
@@ -127,7 +126,8 @@
       </a>
   
   <!--footer section ends-->
-  <script src="js/cart.js"></script>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="js/checkout.js"></script>
   <script src="js/nav.js"></script>
 
       <!-- Custom JS file link -->

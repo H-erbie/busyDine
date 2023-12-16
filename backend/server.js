@@ -12,7 +12,7 @@ const errorHandler = require('./middleware/errorHandler');
 const notFound = require('./middleware/notFound');
 const auth = require('./middleware/auth')
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || '0.0.0.0'
 const app = express()
 app.use(express.json())
 app.use(helmet())

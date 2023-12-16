@@ -194,7 +194,21 @@ section {
 #menu-btn {
   display: none;
 }
-
+.checkout-total{
+  width: max-content;
+  margin: 0 auto;
+}
+.text{
+  font-size: 1.5rem;
+}
+.text-right{
+  text-align: right;
+  font-size: 2rem;
+  margin: 2rem 0;
+  width: 100%;
+color: #25d366;
+  padding: 1.5rem;
+}
 @keyframes fadeUp {
   0% {
     transform: translateY(5rem);
