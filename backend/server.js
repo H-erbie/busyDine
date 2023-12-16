@@ -1,4 +1,4 @@
-const dotenv = require('dotenv')
+// const dotenv = require('dotenv')
 const express = require('express')
 const connectDB = require('./db/connect')
 const userRouter = require('./routes/auth')
@@ -11,7 +11,7 @@ const xss = require('xss-clean');
 const errorHandler = require('./middleware/errorHandler');
 const notFound = require('./middleware/notFound');
 const auth = require('./middleware/auth')
-dotenv.config()
+// dotenv.config()
 const port = process.env.PORT || '0.0.0.0'
 const app = express()
 
