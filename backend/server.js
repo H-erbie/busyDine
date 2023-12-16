@@ -14,6 +14,7 @@ const auth = require('./middleware/auth')
 
 const port = process.env.PORT || '0.0.0.0'
 const app = express()
+
 app.use(express.json())
 app.use(helmet())
 app.use(cors())
