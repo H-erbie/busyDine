@@ -19,7 +19,7 @@ for (const cartItem of cartItems) {
 // console.log(newOrdersProducts, cartItems)
 const callb = async()=>{
     try {
-        const data = await fetch("http://localhost:5000/api/orders", {
+        const data = await fetch("https://busydine.onrender.com/api/orders", {
         method: "POST",
         body: JSON.stringify({
           ordersProducts: newOrdersProducts,

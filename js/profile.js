@@ -30,7 +30,7 @@ logout.addEventListener("click", () => {
 del.addEventListener("click", async () => {
   // del.disabled = true
   try {
-    const data = await fetch("http://localhost:5000/api/v1/auth/del-account", {
+    const data = await fetch("https://busydine.onrender.com/api/v1/auth/del-account", {
       method: "DELETE",
       body: JSON.stringify({
         _id: userInfo.userId,

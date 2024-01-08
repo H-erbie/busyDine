@@ -11,7 +11,7 @@ const err = document.querySelector(".err");
 signUp.addEventListener("click", async () => {
   //   console.log(password.value, phone.value, email.value, fullname.value);
   try {
-    const data = await fetch("http://localhost:5000/api/v1/auth/register", {
+    const data = await fetch("https://busydine.onrender.com/api/v1/auth/register", {
       method: "POST",
       body: JSON.stringify({
         fullname: fullname.value,

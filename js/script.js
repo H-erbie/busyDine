@@ -34,7 +34,7 @@ const dishContainer = document.querySelector(".dishes");
 
 const fetchAllDishes = async () => {
   try {
-    const data = await fetch("http://localhost:5000/api/dishes", {
+    const data = await fetch("https://busydine.onrender.com/api/dishes", {
       method: "GET",
     });
     const res = await data.json();
@@ -121,7 +121,7 @@ dishes.forEach((dish, index) => {
 
 const fetchAllDrinks = async () => {
   try {
-    const data = await fetch("http://localhost:5000/api/drinks", {
+    const data = await fetch("https://busydine.onrender.com/api/drinks", {
       method: "GET",
     });
     const res = await data.json();

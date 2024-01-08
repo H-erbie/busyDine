@@ -9,7 +9,7 @@ signIn.addEventListener("click", async () => {
   // console.log(dishImg.files[0])
   err.textContent = ''
   try {
-    const data = await fetch("http://localhost:5000/api/v1/auth/login", {
+    const data = await fetch("https://busydine.onrender.com/api/v1/auth/login", {
       method: "POST",
       body: JSON.stringify({
         email: email.value,
