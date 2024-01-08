@@ -150,7 +150,7 @@ drinks &&
     const span = document.createElement("span");
     const emptySpan = document.createElement("a");
 
-    img.src = "/backend/" + drink.image;
+    img.src = "busyDine/backend/" + drink.image;
     img.alt = drink.name;
     img.style.width = "205px";
     img.style.height = "150px";
