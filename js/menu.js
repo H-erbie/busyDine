@@ -34,7 +34,7 @@ dishes.forEach((dish, index) => {
   const span = document.createElement("span");
   const emptySpan = document.createElement("a");
 
-  img.src = "/backend/" + dish.image;
+  img.src = "https://h-erbie.github.io/busyDine/backend/" + dish.image;
   img.alt = dish.name;
   img.style.width = "205px";
   img.style.height = "150px";
@@ -109,7 +109,7 @@ extraDishes.forEach((dish, index) => {
   const span = document.createElement("span");
   const emptySpan = document.createElement("a");
 
-  img.src = "/backend/" + dish.image;
+  img.src = "https://h-erbie.github.io/busyDine/backend/" + dish.image;
   img.alt = dish.name;
   img.style.width = "205px";
   img.style.height = "150px";
@@ -199,7 +199,7 @@ drinks &&
     const span = document.createElement("span");
     const emptySpan = document.createElement("a");
 
-    img.src = "/backend/" + drink.image;
+    img.src = "https://h-erbie.github.io/busyDine/backend/" + drink.image;
     img.alt = drink.name;
     img.style.width = "205px";
     img.style.height = "150px";
